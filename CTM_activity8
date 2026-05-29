@@ -1,0 +1,76 @@
+task 1: Identify Network Information
+What is your IP address?
+127.0.0.1
+What is the name of your network interface?
+eth0
+Task 1.2: Check Gateway
+What is your default gateway?
+192.168.254.254
+
+PART 2: TEST NETWORK CONNECTIVITY
+Did the request succeed? NO
+
+What is the average time?
+There is no average response time because all 4 packets were lost (100% packet loss). The 3114ms is only the total time the ping process took to finish.
+
+Part 3: DNS and Network Path
+Task 3.1: Convert Domain to IP
+
+What IP address is returned? 202.91.163.13
+
+Task 3.2: Trace Route
+How many hops does it take to reach Google?
+Based on the traceroute result, the connection reached up to 9 hops before the remaining hops timed out . Therefore, it took at least 9 hops to reach near the destination server.
+
+PART 4: CHECK OPEN PORTS
+Task 4.1: View Active Ports
+List at least 2 open ports
+No open ports were detected in the system. Therefore, there are no ports to list.
+
+What service is running on those ports?
+No services are running on any ports because the ss -tulnp command returned no results, meaning there are currently no listening services detected.
+
+PART 5: NETWORK SCANNING
+Task 5.1: Scan a Target
+
+What ports are open?
+From your Nmap scan of scanme.nmap.org, the open ports are:
+22/tcp – SSH
+80/tcp – HTTP
+9929/tcp – nping-echo
+31337/tcp – Elite
+So there are 4 open ports in total.
+
+What services are detected?
+From your Nmap scan of scanme.nmap.org, the detected services are:
+SSH (port 22)
+HTTP (port 80)
+nping-echo (port 9929)
+Elite service (port 31337)
+These are the services currently running on the open ports of the host.
+
+PART 6: PACKET CAPTURE
+Note: Use sudo if needed
+
+Task 6.1: List Interfaces
+What interface will you use? eth0
+
+What kind of traffic did you see?
+The traffic captured includes ARP requests and replies, DNS queries and responses, ICMPv6 router advertisements, and multicast DNS (mDNS / Google Cast discovery) traffic.
+
+Focus Questions
+
+1. Why do some commands require sudo?
+Some commands need sudo because they are powerful actions that affect the whole system, so they require admin permission to run safely.
+
+2. Importance of nmap in cybersecurity:
+Nmap is used to check a network or computer to see which ports are open and what services are running, helping find security weaknesses.
+
+3. How tcpdump helps in monitoring attacks:
+tcpdump is used to watch network traffic live and helps detect suspicious activity like unusual connections or possible attacks.
+
+
+BONUS CHALLENGE
+
+• What additional information did you get?
+You get the open ports, the services running on those ports, and the version of each service.
